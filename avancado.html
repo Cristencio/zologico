@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Zoológico</title>
+    <link rel="stylesheet" href="css/avancadoStyl.css">
+    <script src="js/avancado.js"></script>
+</head>
+<body>
+    <h1>Gerenciar Espécies no Zoológico</h1>
+    <div id="adicionar">
+        <form action="php/adicionarEspecie.php" method="POST" enctype="multipart/form-data">
+            
+            <table>
+               <td>
+                   <button onclick="upd();" class="bttn">Atualizar</button><br>
+               </td> 
+                <td>
+                    <h2>Adicionar Nova Espécie</h2>
+                </td> 
+            </table>
+                
+            
+            <label for="nome"></label>
+            <input type="text" name="nome" id="nome" required autocomplete="off" placeholder="Nome do Animal"><br>
+            <label for="grupo"></label>
+            <select name="grupo" id="grupo">
+            <option value="Grupo" disabled selected hidden>Grupo</option>
+            <option value="Mamífero">Mamífero</option>
+            <option value="Ave">Ave</option>
+            <option value="Réptil">Réptil</option>
+            </select><br>
+            <label for="pesoMax"></label>
+            <input type="number" step="0.01" name="pesoMax" id="pesoMax" required placeholder="Peso Máximo"><br>
+            <label for="numeroAnimal"></label>
+            <input type="number" name="numeroAnimal" id="numeroAnimal" required placeholder="Numero de animais"><br>
+            <label for="numeroFemea"></label>
+            <input type="number" name="numeroFemea" id="numeroFemea" required placeholder="Numero de femeas"><br>
+            <label for="idadeMax"></label>
+            <input type="number" name="idadeMax" id="idadeMax" required placeholder="Idade maxima da especie"><br>
+            <label for="foto"></label>
+            <input type="file" name="foto" id="foto" required accept="image/*"  placeholder="Foto da especie"><br>
+            <table>
+            
+                   <td>
+                       <button type="submit">Adicionar Espécie</button>
+                   </td>
+                
+            </table>
+        </form>
+    </div>
+    <div id="atualizar" style="display: none;">
+        <form action="php/atualizarEspecie.php" method="POST">
+            <table>
+                <td>
+                    <button onclick="add();" class="bttn">Adicionar</button>
+                </td> 
+                 <td>
+                     <h2>Atualizar Espécie</h2>
+                 </td> 
+             </table>
+            <label for="id"></label>
+            <input type="text" name="id" id="id" required  placeholder="ID da Especie"><br>
+            <label for="numeroAnimal"></label>
+            <input type="number" name="numeroAnimal" id="numeroAnimal" required placeholder="Novo numero de Animais">
+            <label for="numeroAnimal"></label>
+            <input type="number" name="numeroFemea" id="numeroAnimal" required placeholder="Novo numero de Femeas">
+            <table>
+                
+                <td>
+                    <button type="submit">Atualizar Quantidade</button>
+                </td>
+             
+         </table>
+        </form>
+    </div>
+
+    <!-- Outros formulários para outras funcionalidades podem ser adicionados aqui -->
+    
+</body>
+</html>

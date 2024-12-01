@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico</title>
+    <link rel="stylesheet" href="css/styl.css">
+    <script src="js/actionpre.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Zoológico</h1>
+        <nav>
+            <ul>
+                <li><a href="#info-geral">Informação Geral</a></li>
+                <li><a href="#info-especies">Espécies</a></li>
+                <li><a href="#grupos">Grupos</a></li>
+                <li><a href="#sugestoes">Sugestões</a></li>
+                <li><a href="login.html">Inscrever-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ 
+
+    <section id="info-especies">
+        <h2>Informação sobre as Espécies</h2>
+        <div id="especies-lista"></div>
+    </section>
+
+    <section id="grupos">
+        <h2>Grupos de Animais</h2>
+        
+        <a href="login.html"><button onclick="login()">Mamíferos</button></a>
+        <a href="login.html"><button onclick="login()">Réptil</button></a>
+        <a href="login.html"><button onclick="login()">Aves</button></a>
+        <div id="grupos-info"></div>
+    </section>
+
+    <section id="sugestoes" >
+        <h2>Enviar Queixas e Sugestões</h2>
+        <form id="sugestoes" action="login.html">
+            <textarea name="sugestao" placeholder="Sua sugestão ou queixa" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <section id="info-geral">
+            <h2>Informação Geral do Zoológico</h2>
+            <p>Horário: 9h - 17h</p>
+            <p>Preço: MZN 50,00</p>
+            <p>Serviços Oferecidos: Alimentação, Visitas Guiadas</p>
+            <p>Endereço: Rua Unizambeze, 123, Cidade da Beira</p>
+            <p>Telefone: (+258) 850608509</p>
+            <p>Diretor: Felex</p>
+            <p>Email para Contato: Unizambeze@zoologico.co.mz</p>
+            <p>Número de Visitantes por Ano: 1000</p>
+        </section>
+        <p>&copy; 2024 Zoológico. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="admin.html">Administrador</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

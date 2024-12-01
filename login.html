@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/loginStyle.css">
+    <script src="js/logn.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="inscricao-form" style="display: none;" action="php/inscricao.php" method="post">
+            <h1>Inscrever-se</h1>
+            <input type="text" name="nome" placeholder="Nome" required autocomplete="off">
+            <select name="sexo" required autocomplete="off">
+                <option value="" disabled selected hidden>Sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+            <input type="date" name="data" placeholder="Data de Nascimento" required autocomplete="off">
+            <input type="text" name="endereco" placeholder="Endereço" required autocomplete="off">
+            <input type="tel" name="telefone" placeholder="Telefone" required autocomplete="off">
+            <input type="password" name="senha" placeholder="Senha" required autocomplete="off">
+            <input type="text" name="local" placeholder="Local de Trabalho ou Estudo">
+            <button type="submit">Inscrever-se</button>
+            <p>Já tem uma conta? <a href="#" id="show-login-form" onclick="mostraLogin();">Entrar</a></p>
+        </form>
+
+        <form id="login-form" action="php/login.php" method="post">
+            <h1>Entrar</h1>
+            <input type="text" name="lnome" placeholder="Nome" required autocomplete="off">
+            <input type="tel" name="ltelefone" placeholder="Telefone" required autocomplete="off">
+            <button id="botaoTexto1" type="submit">Entrar</button>
+            <p>Não tem uma conta? <a href="#" id="show-signup-form" onclick="mostraInscricao();">Inscrever-se</a></p>
+       
+        </form>
+    </div>
+    
+
+    
+</body>
+</html>
+
